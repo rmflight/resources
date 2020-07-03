@@ -14,3 +14,10 @@ Cairo("filename", width = 2600, height = 6210, dpi = 300, bg = "#FFFFFF", fontfa
 Heatmap(heatmap, colormap, "Expression", cluster_rows = FALSE, cluster_columns = FALSE, row_names_gp = gpar(fontsize = 24, fontfamily = "FreeMono"), column_names_gp = gpar(fontsize = 30))
 dev.off()
 ```
+
+## Merging Legends so they all go together
+
+```r
+ht = ...
+draw(ht, merge_legend = TRUE)
+```
