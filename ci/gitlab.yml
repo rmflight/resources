@@ -1,0 +1,4 @@
+testit:
+  script:
+    - R CMD INSTALL .
+    - Rscript run_tests.R
