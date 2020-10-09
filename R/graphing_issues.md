@@ -19,3 +19,13 @@ Cairo("graphic.png", width = 2600, height = 3600, dpi = 300, bg = "#FFFFFF", fon
 plot(..., gpar(fontsize = 24, fontfamily = "FreeMono"))
 dev.off()
 ```
+
+## Want to graph a distribution
+
+Need to graph a distribution? Use [this tip](https://twitter.com/TrevorABranch/status/1314630049094496256?s=20)
+
+```
+xvals = sort(rchisq(n = 1000, df = 30)
+yvals = dchisq(x = xvals, df = 30)
+plot(xvals, yvals, type = "l")
+```
