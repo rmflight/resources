@@ -2,7 +2,7 @@ If you want to install *all* of the OpenCV library on your machine, the best bet
 This assumes you probably have all of the dependencies for the software met, and just need to download the base OpenCV and the contributed packages.
 
 ```
-wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip\nunzip opencv.zip
+wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/master.zip
 
 unzip master.zip
