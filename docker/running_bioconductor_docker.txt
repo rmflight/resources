@@ -1,9 +1,8 @@
 # no rstudio interface
 docker run \
-      -v ~/Projects/work:/home/rstudio/Projects/work \
-      -it \
-      --user rstudio \
-      bioconductor_latex
+-v ~/Projects/work:/Projects/work \
+-it \
+bioconductor_latex
       
 # find the docker image      
 docker ps 
