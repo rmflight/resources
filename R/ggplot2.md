@@ -10,6 +10,12 @@
 + theme(legend.position="none")
 ```
 
+## Remove a part of a legend
+
+```r
++ guides(colour=FALSE)
+```
+
 ## Make COWPLOT fontsize a bit bigger
 
 ```r

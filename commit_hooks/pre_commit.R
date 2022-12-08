@@ -37,7 +37,9 @@ if ((length(fileDiff) > 0) && doIncrement){
   splitVersion[nVer] <- newEndVersion
   newVersion <- paste(splitVersion, collapse=".")
   currDCF[1,"Version"] <- newVersion
-  currDCF[1, "Date"] <- strftime(as.POSIXlt(Sys.Date()), "%Y-%m-%d")
+  if ("Date" %in% names(currDCF[1, ])) {
+    currDCF[1, "Date"] <- strftime(as.POSIXlt(Sys.Date()), "%Y-%m-%d")
+  }
   write.dcf(currDCF, "DESCRIPTION")
   system("git add DESCRIPTION")
   cat("Incremented package version and added to commit!\n")

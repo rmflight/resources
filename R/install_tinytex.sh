@@ -3,9 +3,11 @@
 wget -qO- "https://github.com/yihui/tinytex/raw/master/tools/install-unx.sh" | sh -s - --admin --no-path
 sudo mv ~/.TinyTeX /opt/TinyTeX
 sudo /opt/TinyTeX/bin/*/tlmgr path add
-sudo tlmgr install metafont mfware inconsolata tex ae parskip listings
+sudo tlmgr install metafont mfware inconsolata tex ae parskip listings pdfcrop
 sudo tlmgr path add
 Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()"
 sudo chown -R root:staff /opt/TinyTeX
 sudo chmod -R g+w /opt/TinyTeX
 sudo chmod -R g+wx /opt/TinyTeX/bin
+
+# if you get an error about tlmgr not found, you may have to edit the secure path by sudo visudo

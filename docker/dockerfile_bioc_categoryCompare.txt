@@ -1,0 +1,25 @@
+FROM bioconductor/bioconductor_docker:devel
+
+# Update apt-get and install latex
+RUN apt-get update \
+        && apt-get install -y --no-install-recommends apt-utils \
+        && apt-get install -y --no-install-recommends \
+        texlive \
+        texlive-latex-extra \
+        texlive-fonts-extra \
+        texlive-bibtex-extra \
+        texlive-science \
+        texi2html \
+        texinfo \
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/*
+
+## Install BiocStyle
+RUN R -e 'BiocManager::install("BiocStyle")'
+## Install packages for categoryCompare
+RUN R -e 'BiocManager::install("Category")'
+RUN R -e 'BiocManager::install(c("hwriter", "GOstats", "colorspace", "RCy3"))'
+RUN R -e 'BiocManager::install(c("affy", "hgu95av2.db", "genefilter", "estrogen", "limma"))'
+
+## Save the bioconductor build machines .Renviron for bioconductor testing
+RUN wget -O /usr/local/lib/R/etc/Renviron.site http://bioconductor.org/checkResults/devel/bioc-LATEST/Renviron.bioc

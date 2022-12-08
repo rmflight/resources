@@ -1,0 +1,18 @@
+# no rstudio interface
+docker run \
+-v ~/Projects/work:/Projects/work \
+-it \
+bioconductor_latex
+      
+# find the docker image      
+docker ps 
+
+# log into a shell
+docker exec --user rstudio -t -i imagename /bin/bash
+
+# rstudio interface
+docker run \
+      -v ~/Projects/work:/home/rstudio/Projects/work \
+      -e PASSWORD=password \
+      -p 8787:8787 \
+      bioconductor_latex

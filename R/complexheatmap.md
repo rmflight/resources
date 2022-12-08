@@ -21,3 +21,11 @@ dev.off()
 ht = ...
 draw(ht, merge_legend = TRUE)
 ```
+
+## Combine a ComplexHeatmap and another Plot in a Single Figure
+
+```r
+ht_grob = grid.grabExpr(draw(ht))
+p = wrap_elements(ht_grob) + other_plot
+p + plot_annotation(tag_levels = "A")
+```
