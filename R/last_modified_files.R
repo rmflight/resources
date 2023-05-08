@@ -34,11 +34,6 @@ script_options <- docopt(doc)
 main <- function(script_options){
   #print(script_options)
 
-  system("export COLUMNS=COLUMNS")
-  terminal_width <- Sys.getenv("COLUMNS")
-
-  options(width=as.integer(terminal_width))
-
   all_files <- list.files(path = script_options$directory,
                           all.files = FALSE,
                           full.names = TRUE,
