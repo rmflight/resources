@@ -3,12 +3,18 @@
 
 ```
 tar -xzf ****.tgz
-./configure --prefix=/mlab/data/software/RDir --enable-R-shlib --with-recommended-packages=no --with-tcltk --with-cairo
+cd R-****
+./configure --enable-R-shlib --with-recommended-packages=no --with-tcltk --with-cairo
 make
 make install
+
+ln -s path/to/bin/R /usr/bin/R
+ln -s path/to/bin/Rscript /usr/bin/Rscript
 ```
 
-Other Stuff that should be installed first (at least on Fedora)
+Other Stuff that should be installed first
+
+Fedora:
 
 ```
 libXt-devel
@@ -24,7 +30,7 @@ cairo-devel
 pango-devel
 ```
 
-For Ubuntu, you will need:
+Ubuntu:
 
 ```
 sudo apt install libreadline-dev libcairo2-dev g++ libxt-dev libcurl4-openssl-dev libcogl-pango-dev tcl-dev tk-dev default-jre default-jdk libgl-dev libbz2-dev liblzma-dev libudunits2-dev libhdf5-dev libnetcdf-dev gfortran libssl-dev libssh2-1-dev
