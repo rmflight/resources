@@ -6,7 +6,7 @@ tar -xzf ****.tgz
 cd R-****
 ./configure --enable-R-shlib --with-recommended-packages=no --with-tcltk --with-cairo
 make
-make install
+make test #make sure it's all good
 
 ln -s path/to/bin/R /usr/bin/R
 ln -s path/to/bin/Rscript /usr/bin/Rscript
