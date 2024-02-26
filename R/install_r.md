@@ -17,7 +17,7 @@ Other Stuff that should be installed first
 Fedora:
 
 ```
-dnf install libXt-devel readline-devel gcc-c++ libcurl-devel mesa-libGLU-devel libxml2-devel tcl-devel tk-devel cairo-devel pango-devel 
+dnf install libXt-devel readline-devel gcc-c++ libcurl-devel mesa-libGLU-devel libxml2-devel tcl-devel tk-devel cairo-devel pango-devel udunits2-devel
 ```
 
 Ubuntu:
