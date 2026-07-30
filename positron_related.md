@@ -38,3 +38,18 @@
 }
 }
 ```
+
+## snippets
+
+```{json}
+"rcode": {
+		"scope": "quarto",
+		"prefix": "r",
+		"body": [
+			"```{r}",
+			"#| label: $0",
+			"```"
+		],
+		"description": "Insert an R code block"
+	}
+```
